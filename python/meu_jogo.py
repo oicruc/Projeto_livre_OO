@@ -43,7 +43,7 @@ class Slime(Personagem):
 
 
         self.__sprite =[]
-        self.__sprite.append(pygame.image.load('python/slime/rwefbu4z4zsb1.png'))
+        self.__sprite.append(pygame.image.load('slime/rwefbu4z4zsb1.png'))
         self.image = self.__sprite[0]
         self.image = pygame.transform.scale(self.image,(208//2,120//2))
         self.rect = self.image.get_rect()
@@ -80,7 +80,7 @@ class Slime(Personagem):
 class Boss(Personagem):
     def __init__(self):
         Personagem.__init__(self)
-        self.__laser = pygame.image.load("python/king_slime/laser.png")
+        self.__laser = pygame.image.load("king_slime/laser.png")
         self.__laser = pygame.transform.scale(self.__laser,(32*20,32*20))
 
 pygame.init()
@@ -118,13 +118,13 @@ prox = 1
 
 # imagem da tela
 telas_de_fundo =[]
-telas_de_fundo.append(pygame.image.load("python/mapa/tela_casa.png"))
-telas_de_fundo.append(pygame.image.load("python/mapa/foradecasa.png"))
-telas_de_fundo.append(pygame.image.load("python/mapa/caminho_1.png"))
-telas_de_fundo.append(pygame.image.load("python/mapa/caminho_2.png"))
-telas_de_fundo.append(pygame.image.load("python/mapa/templo_fora.png"))
-telas_de_fundo.append(pygame.image.load("python/mapa/dojo.png"))
-telas_de_fundo.append(pygame.image.load("python/mapa/imagem_batalha.png"))
+telas_de_fundo.append(pygame.image.load("mapa/tela_casa.png"))
+telas_de_fundo.append(pygame.image.load("mapa/foradecasa.png"))
+telas_de_fundo.append(pygame.image.load("mapa/caminho_1.png"))
+telas_de_fundo.append(pygame.image.load("mapa/caminho_2.png"))
+telas_de_fundo.append(pygame.image.load("mapa/templo_fora.png"))
+telas_de_fundo.append(pygame.image.load("mapa/dojo.png"))
+telas_de_fundo.append(pygame.image.load("mapa/imagem_batalha.png"))
 
 
 for x in range(0,6+1):
@@ -147,10 +147,10 @@ frases.append("VÁ AO SENSEI")
 fonte = pygame.font.SysFont("arial", 20, bold=False, italic=False)
 fonte2= pygame.font.SysFont("arial", 20, bold=False, italic=True)
 
-ninja = pygame.image.load("python/ninja/d4rx4gs-0db63355-e4f1-410f-9b7c-e96a15ae60f5.png")
+ninja = pygame.image.load("ninja/d4rx4gs-0db63355-e4f1-410f-9b7c-e96a15ae60f5.png")
 ninja = pygame.transform.scale(ninja, (332//7,444//7))
 
-boss = pygame.image.load("python/king_slime/KingSlime.png")
+boss = pygame.image.load("king_slime/KingSlime.png")
 boss = pygame.transform.scale(boss,(1134//5,1015//5))
 try_this = 640
 
@@ -265,7 +265,7 @@ frases.append("Peço que continue o dojo como sensei, e salve o mundo com esta a
 frases.append("Creio que ele quer usar o Gold para o mesmo feito, irei te acomapnhar nesta jornada")
 frases.append("creio que sei onde ele está")
 
-sensei = pygame.image.load("python/sensei/sensei.png")
+sensei = pygame.image.load("sensei/sensei.png")
 sensei = pygame.transform.scale(sensei,(32*7,32*7))
 
 telas_de_fundo[5] =pygame.transform.scale(telas_de_fundo[5],(640,480-150))
@@ -340,18 +340,18 @@ while prox: # historia luta
         if prox_palavra == 0:
             tela.blit(sensei,(255,240))
         elif prox_palavra > 0 and prox_palavra !=11:
-            sensei = pygame.image.load("python/sensei/sensei_de lado.png")
+            sensei = pygame.image.load("sensei/sensei_de lado.png")
             sensei = pygame.transform.scale(sensei,((32*7)//2,(32*7)//2))
             if try_this > (255 +32*6):
                 try_this -= 5
             tela.blit(sensei,(255,240))
             tela.blit(boss,(try_this, 220))
         else:
-            sensei = pygame.image.load("python/sensei/sensei_adaga.png")
+            sensei = pygame.image.load("sensei/sensei_adaga.png")
             sensei = pygame.transform.scale(sensei,((32*7)//2,(32*7)//2))
             tela.blit(sensei,(255,240))
             tela.blit(boss,(255 + (32)*6, 220))
-            laser = pygame.image.load("python/king_slime/laser.png")
+            laser = pygame.image.load("king_slime/laser.png")
             laser = pygame.transform.scale(laser,((32*7)//2,(32*7)//2))
             tela.blit(laser,(255 + (32)*3,240))
         if prox_palavra == 9 or prox_palavra == 11 :
