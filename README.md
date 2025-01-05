@@ -1,5 +1,6 @@
 # Projeto_livre_OO
-este é o meu trabalho do projeto livre de OO \n
+este é o meu trabalho do projeto livre de OO
+
 Para rodar, o seu computador precisa instalar o pygame.
 Todo o meu código está em "meu_jogo.py", então terá apenas que roda-lo.
 
